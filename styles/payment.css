@@ -4,16 +4,48 @@ body{
    
 }
 
-.logo{
-    height: 50px;
-    width: 60px;
-}
 header{
     background-color: rosybrown;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+position: fixed;
+top: 0px;
+    
+}
+.logo{
+    margin-right: 12px;
+}
+header img{
+    height: 50px;
+    width: 60px;
+   
+
 }
 footer{
-    background-color: rosybrown;
+    background-color: rosybrown;    
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+bottom: 0;
+display: flex;
+
+   
+    
 }
+footer  a{
+    margin-left: 1%;
+    margin-top: 1%;
+}
+footer p{
+    margin-top: 2%;
+    font-size: 10px;
+}
+footer div{
+    margin-right: 3%;
+    margin-top: 1%;
+}
+
 .hotaldetail{
     background-color: rgb(132,136,139);
     height: 20%;
