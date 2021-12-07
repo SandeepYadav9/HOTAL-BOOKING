@@ -1,0 +1,13 @@
+.loader1 {   
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;    
+    border: 12px solid;
+    border-top-color: #444;  
+    border-bottom-color: #f3f3f3; 
+    border-right-color: #f3f3f3;
+    border-left-color: #f3f3f3;
+    margin: 50px  auto;
+    top: 50px;
+    
+}

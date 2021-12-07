@@ -1,4 +1,34 @@
+body{
+    margin: 0;
+    background-color: #e0e0e0;
+   
+}
+
 .logo{
     height: 50px;
     width: 60px;
+}
+header{
+    background-color: rosybrown;
+}
+footer{
+    background-color: rosybrown;
+}
+.hotaldetail{
+    background-color: rgb(132,136,139);
+    height: 20%;
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+
+}
+.customerDetail{
+    margin-left: 2%;
+}
+.customerPrice{    
+   margin: 2%;
+   border: 1px solid;
+    padding: 4px;    
+    border-radius: 1px;
+
 }

@@ -1,4 +1,23 @@
+body{
+    margin: 0;
+   background-color: #e0e0e0;
+}
+
 .logo{
     height: 50px;
     width: 60px;
 }
+header{
+    background-color: rosybrown;
+}
+footer{
+    background-color: rosybrown;
+}
+.contentslist{
+    margin: 2%;
+}
+.detailist{
+    background-color:rgb(132,136,139) ;
+    width: 40%;
+}
+

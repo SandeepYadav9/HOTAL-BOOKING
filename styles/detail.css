@@ -1,4 +1,19 @@
+body{
+    margin: 0;
+   background-color: #e0e0e0;
+}
+
 .logo{
     height: 50px;
     width: 60px;
 }
+header{
+    background-color: rosybrown;
+}
+footer{
+    background-color: rosybrown;
+}
+.detail{
+    margin: 2% 4% 0 4%;
+}
+
