@@ -1,24 +1,30 @@
 body{
+    
     margin: 0;
    background-color: #e0e0e0;
 }
 header{
+    top: 0;
     background-color: rosybrown;
     width: 100%;
     display: flex;
-    justify-content: space-between;
 position: fixed;
-top: 0px;
+justify-content: space-between;
+align-items: center;
+
     
 }
-.logo{
-    margin-right: 12px;
-}
 header img{
-    height: 50px;
+    height: 60px;
     width: 60px;
-   
 
+}
+header a {
+    margin-right: 2%;
+    color: #000;
+    text-decoration: none;
+
+    
 }
 footer{
     background-color: rosybrown;    
@@ -27,6 +33,7 @@ footer{
     justify-content: space-between;
 bottom: 0;
 display: flex;
+align-items: center;
 
    
     
@@ -34,6 +41,8 @@ display: flex;
 footer  a{
     margin-left: 1%;
     margin-top: 1%;
+    text-decoration: none;
+    color: #000;
 }
 footer p{
     margin-top: 2%;
@@ -43,7 +52,34 @@ footer div{
     margin-right: 3%;
     margin-top: 1%;
 }
-.detail{
-    margin: 2% 4% 0 4%;
+.formInput{
+    border-left: 1px solid black;
+}
+.detail{   
+ justify-content: space-around;
+    display: flex;
+    margin-top:10% ;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+   
+    flex-direction: row;
+}
+.radissonDetail{
+    margin-left: 10px;
+    
+}
+
+ form{   
+    margin: auto 20px;    
+    text-align: justify;
+    
+}
+form input{
+    margin-left: 25px;
+    
+}
+form button{
+    margin-left:  35%;
 }
 
