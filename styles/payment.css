@@ -9,9 +9,9 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-position: fixed;
-top: 0px;
-align-items: center;
+    position: fixed;
+    top: 0px;
+    align-items: center;
     
 }
 
