@@ -14,14 +14,22 @@ top: 0px;
 align-items: center;
     
 }
-.logo{
-    margin-right: 12px;
-}
+
 header img{
     height: 50px;
     width: 60px;
    
 
+}
+.login {
+    background-color: rgb(99, 167, 230);
+    margin-right: 2%;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+
+    
 }
 footer{
     background-color: rosybrown;    
@@ -34,11 +42,16 @@ align-items: center;
    
     
 }
-footer  a{
+.contact{
     margin-left: 1%;
     margin-top: 1%;
+    background-color: rgb(99, 167, 230);
+   
     text-decoration: none;
     color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    
 }
 footer p{
     margin-top: 2%;

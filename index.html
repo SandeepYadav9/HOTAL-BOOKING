@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <style>
+                figcaption{
+                        margin-left: 50px;
+                        color: yellow;
+                }
+        </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
   <link href="./styles//index.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -14,40 +21,53 @@
         <header>
             <img class="logo" src="./assests//images//logo.png"
              height="200px" width="150px"/>
-            <a href="./login.html">Login</a>           
+            <a href="./login.html">Login</a>   
+             
         </header>
+        
  <div> 
-        <input type="text" placeholder="City"/> <br/> <br/>
-        <div class="cityCard">   
-        <a href="./list.html">               
+        <input type="text" placeholder="City"/> <br/> <br/>  
+        <div class="cityCard"> 
+                
+        <a href="./list.html"> 
+                <figure>              
             <img class="imagecity" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg
-            " height="150px" width="150px"/></a> 
+            " height="150px" width="150px"/> </a> 
+            <figcaption>Delhi</figcaption>
+        </figure>
+        <figure>
            <a><img class="imagecity" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg
            " height="150px" width="150px"/></a>
-           
+           <figcaption>Jaunpur</figcaption>
+        </figure>
+           <figure>
           <a> <img class="imagecity" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg
            " height="150px" width="150px"/></a>
+           <figcaption>Hydrabad</figcaption>
+          </figure>
+          <figure>
           <a> <img class="imagecity" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg
            " height="150px" width="150px"/></a>
-           <br/>
-           
+           <figcaption >Gova</figcaption>
+        </figure>
+           <br/>           
           </div>
           
         </div>
         
-          <a  style=" text-decoration: none; color: #000;" href="index.html">View Mor >></a>
-     
        
+     
+        <a  style=" text-decoration: none; color: yellow; margin-left: 50%; " href="#index.html">View Mor >></a>
         <footer>
           
-            <a href="./contact.html">Contact Us</a> 
+            <a class="contact" href="./contact.html">Contact Us</a> 
             <p>@2021 ROOM SEARCH PVT LTD</p>
            
             <div>
-           
-              <img height="20px" width="20px" src="./assests//images//facebook.png"/>
-              <img height="20px" width="20px" src="./assests//images/instagram.png"/>
-              <img height="20px" width="20px" src="./assests//images//twitter.png"/>
+             
+             <a href="https://www.facebook.com/"> <i class="fa fa-facebook-f" style="font-size:24px;color:blue"></i></a>
+             <a href="https://www.instagram.com/">  <i class="fa fa-instagram" style="font-size:24px;color:red"></i></a>
+              <a href="https://twitter.com/">   <i class="fa fa-twitter" style="font-size:24px;color:yellow"></i></a>
             </div>
         </footer>
   

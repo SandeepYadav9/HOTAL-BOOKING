@@ -1,19 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <form action="./index.html">
-        <label>Username:</label>
-        <input type="text" placeholder="Enter Username" required /> <br/> <br/>
-        <label>Password:</label>
-        <input type="password"  placeholder="Enter Password" required/><br/><br/>      
-        <button >Login</button>
-     
-    </form>
-</body>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(20).jpg");
+            }
+           
+            #mainContainer {
+                display: flex;
+                justify-content: center; 
+               
+                
+            }
+            #container {
+                width: 300px;  
+               padding: 1em 2em;               
+                border-radius: 5%;               
+                margin-top: 8em;
+                border:  0.0625em solid  #D9D9D9;
+                background-color: #D9D9D9;
+              box-shadow: 0 19px 19px rgba(0, 0, 0, 0.3);
+                             
+               
+            }
+            #password {
+                margin-top: 1em;
+            }
+            #buttons {
+                margin-top: 3em;
+            }
+            .closeButton {
+                height: 2em;
+                width: 80px;
+                cursor: pointer;
+            }
+            .submitButton {
+                height: 2em;
+                width: 80px;
+                cursor: pointer;
+            }
+
+            /* TODO: Add the CSS to #container as specified in teh question */
+
+        </style>
+    </head>
+    <body>
+        <div id="mainContainer">
+            <div id="container">
+            <h1>Login</h1>
+                <div  id="nameField">
+                    <label>Username: </label>
+                    <input type="text" placeholder="Enter Username">
+                </div>
+                <div  id="password">
+                    <label>Password: </label>
+                    <input type="password" placeholder="Enter Password">
+                </div>
+                <div id="buttons">
+                    <button type="submit" class="submitButton">Login</button>
+                    <button type="button" class="closeButton">Close</button>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

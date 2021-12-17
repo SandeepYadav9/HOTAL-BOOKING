@@ -1,7 +1,6 @@
 body{
     margin: 0;
-   background-color: #e0e0e0;
-   
+   background-color: #e0e0e0;  
    
 }
 
@@ -22,9 +21,13 @@ header img{
 
 }
 header a {
+    background-color: rgb(99, 167, 230);
     margin-right: 2%;
     text-decoration: none;
     color: #000;
+    padding: 10px;
+    border-radius: 5px;
+
     
 }
  ul{
@@ -55,11 +58,18 @@ display: flex;
    
     
 }
-footer  a{
+
+
+.contact{
     margin-left: 1%;
     margin-top: 1%;
+    background-color: rgb(99, 167, 230);
+   
     text-decoration: none;
     color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    
 }
 footer p{
     margin-top: 2%;
@@ -71,24 +81,19 @@ footer div{
 }
 
 .contentslist{    
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   
-
-    
+     display: flex;
+    justify-content: space-around;    
+    align-items: center;
+    flex-wrap: wrap;
+ 
 } 
+
 .detailist{
     border: 1px solid black;
-    border-radius: 5px;
-    width: 30%;
-    height: 30%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
-    text-align:justify;
-    
+   border-radius: 5px ;
+   margin: 20px;
+   text-align: justify;
+   
 } 
     
     
