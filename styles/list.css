@@ -36,11 +36,22 @@ header a {
     margin: 50px;
     display: flex;
     justify-content: center;
+    
    
     
 }
 ul li{
     margin: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 7px;
+   
+    
+  
+}
+ul li:hover{
+    opacity: 1;
+    background-color: royalblue;
 }
 ul li a{
     text-decoration: none;
@@ -85,16 +96,42 @@ footer div{
     justify-content: space-around;    
     align-items: center;
     flex-wrap: wrap;
+    height: auto;
+   
+    
  
 } 
 
 .detailist{
-    border: 1px solid black;
+    border: 1px solid gray;
    border-radius: 5px ;
    margin: 20px;
    text-align: justify;
+   width: 40%;
+   display: flex;
+   background-color: lightgray;
+   flex-wrap: nowrap;
+   
    
 } 
+/* Mobile divive */
+@media screen and (max-width: 750px) {
+    .detailist{
+        width: 85%;
+    }
+    
+}
+.detailist:hover{
+    opacity: 1;
+    background-color: rosybrown;
+}
+ .detailist a{
+    text-decoration: none;
+    color: #000;
+}
+.hotal{
+    margin: 4%;
+}
     
     
     
@@ -109,5 +146,4 @@ footer div{
    height: 25vh;
    overflow: hidden;
 } */
-
 
