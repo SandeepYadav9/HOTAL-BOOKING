@@ -89,7 +89,14 @@ header a{
 }
 .image{
     position: relative;
-    
+    width: [object Object]px; 
+	height: [object Object]px; 
+	background: #F8F8F8; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 7px 3px 13px rgba(0, 0, 0, 0.4)  ; 
+	-webkit-box-shadow: 7px 3px 13px rgba(0, 0, 0, 0.4)  ; 
+	-moz-box-shadow: 7px 3px 13px rgba(0, 0, 0, 0.4)  ; 
+    border-radius: 26px;
     
 }
 .imageImage{
