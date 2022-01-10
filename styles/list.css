@@ -1,121 +1,84 @@
-body {
-  margin: 0;
-  background-color: #e0e0e0;
-}
 
-header {
-  top: 0;
+.hotel-image-small {
+  height: 200px;
+  width: 250px;
+}
+.hotel{
+  margin: 4% 5% 0% 5%; 
+  background-color: lightgrey;
+  width: 40%;
+  float: left;
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  max-height: 200px;
+}
+.hotel:hover {
   background-color: rosybrown;
+}
+#list-container {
+  position: relative;
+  height: 100%;
   width: 100%;
-  display: flex;
-  position: fixed;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 6%;
+  margin-bottom: 6%;
 }
-header img {
-  height: 60px;
-  width: 60px;
+#list-map {
+  position: relative;
+  top: 0%;
 }
-header a {
-  background-color: rgb(99, 167, 230);
-  margin-right: 2%;
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-  border-radius: 5px;
-}
-ul {
-  list-style: none;
+#select-list {
+  position: absolute;
+  left: 42%;
   font-weight: bold;
-  margin: 50px;
-  display: flex;
+}
+#select-map {
+  position: absolute;
+  left: 50%;
+  font-weight: bold;
+}
+#pills-tab {
   justify-content: center;
 }
-ul li {
-  margin: 10px;
-  border: 1px solid blue;
-  border-radius: 5px;
-  padding: 7px;
-}
-ul li:hover {
-  opacity: 1;
-  background-color: royalblue;
-}
-ul li a {
-  text-decoration: none;
-}
-
-footer {
-  background-color: rosybrown;
-  width: 100%;
-  position: fixed;
-  justify-content: space-between;
-  bottom: 0;
-  display: flex;
-}
-
-.contact {
-  margin-left: 1%;
-  margin-top: 1%;
-  background-color: rgb(99, 167, 230);
-
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-  border-radius: 5px;
-}
-footer p {
+#map {
+  height: 82vh;
   margin-top: 2%;
-  font-size: 10px;
-}
-footer div {
-  margin-right: 3%;
-  margin-top: 1%;
 }
 
-.contentslist {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  height: auto;
-}
+@media screen and (max-width: 576px) {  
+  #list-container {
+      margin-bottom: 150%;
+  }
 
-.detailist {
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin: 20px;
-  text-align: justify;
-  width: 40%;
-  display: flex;
-  background-color: lightgray;
-  flex-wrap: nowrap;
-}
-/* Mobile divive */
-@media screen and (max-width: 750px) {
-  .detailist {
-    width: 85%;
+  #pills-tab {
+      padding-top: 15%;
+  }
+
+  .hotel{
+      width: 90%;
+      flex-direction: column;
+  }
+
+  .hotel-image-small {
+      width: 100%;
+  }
+
+  #map-view > img {
+      width: 100%;
   }
 }
-.detailist:hover {
-  opacity: 1;
-  background-color: rosybrown;
-}
-.detailist a {
-  text-decoration: none;
-  color: #000;
-}
-.hotal {
-  margin: 4%;
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #pills-tab {
+      padding-top: 5%;
+  }
+  
+  .hotel{
+      width: 90%;
+      flex-direction: column;
+  }
+
+  #map-view > img {
+      width: 100%;
+  }
 }
 
-/* }
-.detailist{
-    background-color:rgb(132,136,139);
-    display: flex;
-    flex-direction: row;
-   margin-left: 12px;
-   background-color: lightgray;
-   height: 25vh;
-   overflow: hidden;
-} */
