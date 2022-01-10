@@ -1,6 +1,5 @@
-
 let headerTemplate = () => {
-    let headerTemplateString = `
+  let headerTemplateString = `
       <img src="assests/images/logo.png" class="logo" id="logo-image" alt="logo"/>
                   <button type="button" id="login" class="btn btn-light btn-sm" data-toggle="modal" 
                                   data-backdrop="false" data-target="#login-modal"
@@ -33,12 +32,12 @@ let headerTemplate = () => {
                           </div>
                       </div>
                   </div>`;
-  
-    document.getElementById("header").innerHTML += headerTemplateString;
-  };
-  
-  let footerTemplate = () => {
-    let footerTemplateString = `   <footer class="header-footer">
+
+  document.getElementById("header").innerHTML += headerTemplateString;
+};
+
+let footerTemplate = () => {
+  let footerTemplateString = `   <footer class="header-footer">
       <div id="contact">
           <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false" data-target="#contact-modal">Contact Us</button>
           
@@ -83,57 +82,58 @@ let headerTemplate = () => {
           </a>
       </div>
   </footer>`;
-    document.getElementById("footer").innerHTML += footerTemplateString;
-  };
-  
-  headerTemplate();
-  footerTemplate();
-  
-  let login = (event) => {
-    localStorage.setItem("username", "admin");
-    localStorage.setItem("password", "admin");
+  document.getElementById("footer").innerHTML += footerTemplateString;
+};
+
+headerTemplate();
+footerTemplate();
+
+let login = (event) => {
+  localStorage.setItem("username", "admin");
+  localStorage.setItem("password", "admin");
+  localStorage.setItem("isUserLoggedIn", "false");
+  event.preventDefault();
+
+  let userElement = document.getElementById("username");
+  let passwordElement = document.getElementById("password");
+
+  let storedUsername = localStorage.getItem("username");
+  let storedPassword = localStorage.getItem("password");
+
+  if (
+    userElement.value === storedUsername &&
+    passwordElement.value === storedPassword
+  ) {
+    localStorage.setItem("isUserLoggedIn", "true");
+    alert("Successfully Logged In!");
+    document.getElementById("login").innerText = "LOGOUT";
+    location.reload();
+  } else {
+    alert("Invalid Credentials!, Login Failed!");
+  }
+  userElement.value = "";
+  passwordElement.value = "";
+};
+
+let verifyLogin = () => {
+  let isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
+  let loginBtn = document.getElementById("login");
+  if (!isUserLoggedIn || isUserLoggedIn === "false") {
+    localStorage.clear();
+    loginBtn.innerText = "LOGIN";
+    loginBtn.dataset.target = "#login-modal";
+  } else if (isUserLoggedIn === "true") {
+    loginBtn.dataset.target = "";
+    loginBtn.innerText = "LOGOUT";
+  }
+};
+
+verifyLogin();
+
+let headerLogin = () => {
+  if (localStorage.getItem("isUserLoggedIn") === "true") {
     localStorage.setItem("isUserLoggedIn", "false");
-    event.preventDefault();
-  
-    let userElement = document.getElementById("username");
-    let passwordElement = document.getElementById("password");
-  
-    let storedUsername = localStorage.getItem("username");
-    let storedPassword = localStorage.getItem("password");
-  
-    if (  userElement.value === storedUsername && passwordElement.value === storedPassword ) {
-      localStorage.setItem("isUserLoggedIn", "true");
-      alert("Successfully Logged In!");
-      document.getElementById("login").innerText = "LOGOUT";
-      location.reload();
-    } else {
-      alert("Invalid Credentials!, Login Failed!");
-    }
-    userElement.value = "";
-    passwordElement.value = "";
-  };
-  
-  let verifyLogin = () => {
-    let isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
-    let loginBtn = document.getElementById("login");
-    if (!isUserLoggedIn || isUserLoggedIn === "false") {
-      localStorage.clear();
-      loginBtn.innerText = "LOGIN";
-      loginBtn.dataset.target = "#login-modal";
-    } else if (isUserLoggedIn === "true") {
-      loginBtn.dataset.target = "";
-      loginBtn.innerText = "LOGOUT";
-    }
-  };
-  
-  verifyLogin();
-  
-  let headerLogin = () => {
-    if (localStorage.getItem("isUserLoggedIn") === "true") {
-      localStorage.setItem("isUserLoggedIn", "false");
-      alert("Logged out successfuly, Please visit again!");
-      location.reload();
-    }
-  };
-  
-  
+    alert("Logged out successfuly, Please visit again!");
+    location.reload();
+  }
+};
