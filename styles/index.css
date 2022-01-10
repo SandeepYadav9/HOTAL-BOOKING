@@ -1,28 +1,28 @@
-body{
+body {
   width: 100%;
-  height:100%;
-  margin:0;
+  height: 100%;
+  margin: 0;
   background-color: #e0e0e0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.content>.search-bar{
-  background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 380px;
-      width:100%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.content > .search-bar {
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 380px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#banner{
+#banner {
   background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
 
   height: 380px;
- 
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,27 +46,25 @@ body{
 #search-input:focus {
   outline: none;
 }
-input{
+input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
   border-radius: 12px;
-  width:100%;
+  width: 100%;
   padding: 10px;
   font-size: 16px;
-  
 }
-input:focus{
+input:focus {
   outline: none;
 }
 
-#city_img{
+#city_img {
   height: 150px;
   width: 150px;
   padding: 4%;
 }
 
-
-.city-image{
+.city-image {
   height: 150px;
   width: 150px;
   border-radius: 25%;
@@ -95,10 +93,10 @@ input:focus{
   opacity: 1;
 }
 .overlay span {
-  position:relative;
-  top:45%;
+  position: relative;
+  top: 45%;
 }
-.city-type{
+.city-type {
   height: 150px;
   width: 150px;
   border-radius: 25%;
@@ -107,10 +105,11 @@ input:focus{
 #view-more-city-cards {
   display: none;
 }
-.images{
+.images {
   position: relative;
 }
-.city-images>div>img, .city-images>div>a>img{
+.city-images > div > img,
+.city-images > div > a > img {
   height: 150px;
   width: 150px;
   border-radius: 25%;
@@ -118,7 +117,7 @@ input:focus{
 }
 
 .text {
-  color:#f1f1f1;
+  color: #f1f1f1;
   font-size: 15px;
   position: absolute;
   top: 50%;
@@ -126,7 +125,7 @@ input:focus{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.contact_us{
+.contact_us {
   display: inline-block;
   vertical-align: middle;
   position: absolute;
@@ -134,178 +133,182 @@ input:focus{
 }
 
 #view-more {
-  margin-bottom:7%;
+  margin-bottom: 7%;
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width:576px){
-  .city-images>div>img, .city-images>div>a>img{
-      height: 150px;
-      width: 150px;
-      border-radius: 25%;
-      box-shadow: 10px 10px 10px grey;
+@media screen and (max-width: 576px) {
+  .city-images > div > img,
+  .city-images > div > a > img {
+    height: 150px;
+    width: 150px;
+    border-radius: 25%;
+    box-shadow: 10px 10px 10px grey;
   }
-  .content{
-      width:100%;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+  .content {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-  .content>.search-bar{
-      background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 380px;
-      width:100%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .content > .search-bar {
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  input{
-      border: 1px solid transparent;
-      background-color: #f1f1f1;
-      border-radius: 12px;
-      width:100%;
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    width: 100%;
   }
-  .city-images{
-      padding-top: 4%;
-      padding-bottom: 4%; 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+  .city-images {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
-  ::placeholder{
-      padding-left: 10px;
-      font-size: 16px;
+  ::placeholder {
+    padding-left: 10px;
+    font-size: 16px;
   }
-  .view-more{
-      padding-top: 1%;
-      padding-bottom: 1%;
-      text-align: center;
+  .view-more {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
   }
-  textarea:focus, input:focus{
-      outline: none;
+  textarea:focus,
+  input:focus {
+    outline: none;
   }
-  .images{
-      position: relative;
-      padding: 4%;
+  .images {
+    position: relative;
+    padding: 4%;
   }
   .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      height: 150px;
-      width: 150px;
-      opacity: 0;
-      transition: 1 ease;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    transition: 1 ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25%;
   }
-    
-  .city-images>.images:hover .overlay, .city-images>.images>a:hover .overlay{
-      opacity: 1;
+
+  .city-images > .images:hover .overlay,
+  .city-images > .images > a:hover .overlay {
+    opacity: 1;
   }
-    
+
   .text {
-      color:#f1f1f1;
-      font-size: 15px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+    color: #f1f1f1;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 576px){
-  
-  .city-images>div>img, .city-images>div>a>img{
-      height: 150px;
-      width: 150px;
-      border-radius: 25%;
-      box-shadow: 10px 10px 10px grey;
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .city-images > div > img,
+  .city-images > div > a > img {
+    height: 150px;
+    width: 150px;
+    border-radius: 25%;
+    box-shadow: 10px 10px 10px grey;
   }
-  .content{
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      width:100%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
   }
-  .content>.search-bar{
-      background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size:cover;
-      height: 380px;
-      width:100%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .content > .search-bar {
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  input{
-      border: 1px solid transparent;
-      background-color: #f1f1f1;
-      border-radius: 12px;
-      width:100%;
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    width: 100%;
   }
-  .city-images{
-      margin-left: 15%;
-      margin-right: 15%;
-      padding-top: 4%;
-      padding-bottom: 4%; 
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
+  .city-images {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
   }
-  ::placeholder{
-      padding-left: 10px;
-      font-size: 16px;
+  ::placeholder {
+    padding-left: 10px;
+    font-size: 16px;
   }
-  .view-more{
-      padding-top: 1%;
-      padding-bottom: 1%;
-      text-align: center;
+  .view-more {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
   }
-  textarea:focus, input:focus{
-      outline: none;
+  textarea:focus,
+  input:focus {
+    outline: none;
   }
-  .images{
-      position: relative;
-      padding:4%;
+  .images {
+    position: relative;
+    padding: 4%;
   }
   .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      height: 150px;
-      width: 150px;
-      opacity: 0;
-      transition: 1 ease;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 25%;
-      
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    transition: 1 ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25%;
   }
-    
-  .city-images>.images:hover .overlay, .city-images>.images>a:hover .overlay{
-      opacity: 1;
+
+  .city-images > .images:hover .overlay,
+  .city-images > .images > a:hover .overlay {
+    opacity: 1;
   }
-    
+
   .text {
-      color:#f1f1f1;
-      font-size: 15px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+    color: #f1f1f1;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 }

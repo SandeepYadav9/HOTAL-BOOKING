@@ -1,76 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/payment.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
-    <link href="./styles//payment.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <!-- Header Loginpage -->
-    <header>
-      <a href="./index.html"><img src="./assests//images//logo.png" /> </a>
-      <a class="login" href="./login.html">Login</a>
-    </header>
+    <div id="loader"></div>
+    <div id="container">
+      <header class="header-footer" id="header"></header>
 
-    <!-- Content Page -->
-    <div class="hotaldetail">
-      <img
-        style="max-width: 270px; max-height: 300px"
-        src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg "
-      />
-      <div class="hotalBlur">
-        <h2>Radisson Blu Hotel</h2>
-        <p>#38 of 1, 2839 hotels in New Delhi</p>
-        <p>National Highway 8, New Delhi 1110017 India</p>
+      <!-- Content -->
+      <div id="payment-container">
+        <div id="hotel-details">
+          <img class="hotel-image" id="hotel-image" alt="hotel-image" />
+          <div class="hotel-name-rating">
+            <h2 id="hotel-name"></h2>
+            <p id="ranking"></p>
+            <p id="address"></p>
+          </div>
+        </div>
+        <div id="customer-payment-details">
+          <div id="customer-details">
+            <p id="name"></p>
+            <p id="adult"></p>
+            <p id="from-date"></p>
+            <p id="to-date"></p>
+          </div>
+          <div id="payment-details">
+            <p id="tariff"></p>
+            <p id="amount"></p>
+          </div>
+          <a href="#" id="pay-now">
+            <button
+              id="pay-now-button"
+              type="button"
+              class="btn btn-success"
+              onclick="payNow(event)"
+            >
+              Pay Now
+            </button>
+          </a>
+        </div>
       </div>
+      <!-- Footer -->
+      <footer class="header-footer" id="footer"></footer>
+      <!--Modal for login-->
+
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Please login</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="username" class="col-sm-2 col-form-label"
+                    >Username:</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      required
+                      autocomplete="on"
+                      placeholder="Enter Username"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-2 col-form-label"
+                    >Password:</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="inputPassword"
+                      required
+                      placeholder="Enter Password"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div
+              class="modal-footer"
+              style="display: flex; justify-content: center"
+            >
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--login modal ended-->
+
+      <!--contact us modal-->
+
+      <div
+        class="modal fade"
+        id="contactUsModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for reaching out!!!</p>
+              <p>Please enter your email and we will get back to you.</p>
+              <form>
+                <div class="form-group row">
+                  <label for="email" class="col-sm-2 col-form-label"
+                    >Email:</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      required
+                      autocomplete="on"
+                      placeholder="Enter your email id"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="pay-now-button" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--contact us modal ended-->
     </div>
-
-    <div class="contaner">
-      <div class="customerDetail">
-        <p><b>Name:</b> John Doe</p>
-        <p><b>No of Adults</b>:2</p>
-        <p><b>Check-in Date </b>:06: 06: 2020</p>
-        <p><b>Check-out Date </b>: 08-06-2020</p>
-      </div>
-      <div class="customerPrice">
-        <p><b>Traff Breakdown: </b> Rs 1000 x 2 Adults X 5 Nights</p>
-        <p><b>Total Amounts:</b> Rs 10000</p>
-      </div>
-      <div class="pay">
-        <a
-          href="payment.html"
-          style="
-            color: #000;
-            text-decoration: none;
-            padding: 10px;
-            background-color: rgb(99, 167, 230);
-            border-radius: 5px;
-          "
-          >Pay Now</a
-        >
-      </div>
-    </div>
-
-    <footer>
-      <a class="contact" href="./contact.html">Contact Us</a>
-      <p>&copy;2021 ROOM SEARCH PVT LTD</p>
-      <div>
-        <a href="https://www.facebook.com/">
-          <i class="fa fa-facebook-f" style="font-size: 24px; color: blue"></i
-        ></a>
-        <a href="https://www.instagram.com/">
-          <i class="fa fa-instagram" style="font-size: 24px; color: red"></i
-        ></a>
-        <a href="https://twitter.com/">
-          <i class="fa fa-twitter" style="font-size: 24px; color: yellow"></i
-        ></a>
-      </div>
-    </footer>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/payment.js"></script>
   </body>
 </html>

@@ -1,10 +1,9 @@
-
 .hotel-image-small {
   height: 200px;
   width: 250px;
 }
-.hotel{
-  margin: 4% 5% 0% 5%; 
+.hotel {
+  margin: 4% 5% 0% 5%;
   background-color: lightgrey;
   width: 40%;
   float: left;
@@ -45,40 +44,39 @@
   margin-top: 2%;
 }
 
-@media screen and (max-width: 576px) {  
+@media screen and (max-width: 576px) {
   #list-container {
-      margin-bottom: 150%;
+    margin-bottom: 150%;
   }
 
   #pills-tab {
-      padding-top: 15%;
+    padding-top: 15%;
   }
 
-  .hotel{
-      width: 90%;
-      flex-direction: column;
+  .hotel {
+    width: 90%;
+    flex-direction: column;
   }
 
   .hotel-image-small {
-      width: 100%;
+    width: 100%;
   }
 
   #map-view > img {
-      width: 100%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   #pills-tab {
-      padding-top: 5%;
+    padding-top: 5%;
   }
-  
-  .hotel{
-      width: 90%;
-      flex-direction: column;
+
+  .hotel {
+    width: 90%;
+    flex-direction: column;
   }
 
   #map-view > img {
-      width: 100%;
+    width: 100%;
   }
 }
-

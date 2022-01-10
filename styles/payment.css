@@ -1,92 +1,72 @@
 body {
-  margin: 0;
   background-color: #e0e0e0;
 }
-
-header {
-  background-color: rosybrown;
+#container {
+  height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0px;
-  align-items: center;
+  margin: 0px;
+  color: black;
 }
-
-header img {
-  height: 50px;
-  width: 60px;
-}
-.login {
-  background-color: rgb(99, 167, 230);
-  margin-right: 2%;
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-  border-radius: 5px;
-}
-footer {
-  background-color: rosybrown;
-  width: 100%;
-  position: fixed;
-  justify-content: space-between;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-}
-.contact {
-  margin-left: 1%;
-  margin-top: 1%;
-  background-color: rgb(99, 167, 230);
-
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-  border-radius: 5px;
-}
-footer p {
-  margin-top: 2%;
-  font-size: 10px;
-}
-footer div {
-  margin-right: 3%;
-  margin-top: 1%;
-}
-
-.hotaldetail {
+#hotel-details {
   background-color: rgb(132, 136, 139);
+  width: 60%;
+  height: 20%;
+  margin: 2% auto;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin: 8% auto;
-  width: 50%;
-  border-radius: 10px;
-  overflow: hidden;
 }
-.hotalBlur {
-  margin: auto 20px;
-  text-align: justify;
-}
-.contaner {
-  border: 1px solid black;
+#payment-container {
+  margin-top: 7%;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: -2%;
-  margin: 3%;
-  background-color: rosybrown;
+  flex-direction: column;
+  align-content: center;
+}
+.hotel-image {
+  max-height: 300px;
+  max-width: 270px;
+}
+#customer-payment-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2%;
+  border: black 1px solid;
   border-radius: 5px;
+  margin: 0% 2%;
+  background-color: rosybrown;
 }
-.customerDetail {
-  word-spacing: 2px;
-  font-family: serif;
-  text-align: justify;
-}
+@media screen and (max-width: 576px) {
+  #hotel-details {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 10px;
+  }
 
-.pay {
-  margin-top: 5.5%;
+  #payment-container {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  #pay-now {
+    align-self: center;
+  }
+
+  #customer-payment-details {
+    align-items: normal;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .hotel-name-rating {
+    text-align: center;
+  }
 }
-.customerPrice {
-  margin-top: 3%;
-  text-align: justify;
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #hotel-details {
+    width: 80%;
+    margin: 5% auto;
+  }
 }
